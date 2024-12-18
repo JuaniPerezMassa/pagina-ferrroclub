@@ -1,0 +1,613 @@
+* {
+    box-sizing: border-box;
+    margin: 1.5;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+header .navbar img {
+    width: 500px; /* Ajusta el ancho según lo que necesites */
+    height: auto; /* Mantén la proporción de la imagen */
+}
+
+@media (max-width: 768px) {
+    .nav-logo img {
+        width: 70px; /* Reducir tamaño en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo img {
+        width: 50px; /* Aún más pequeño en móviles */
+    }
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    transition: gap 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 8px;
+        flex-direction: column;
+    }
+
+    .nav-logo img {
+        width: 150px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo img {
+        width: 120px;
+    }
+
+    .nav-menu {
+        display: none; /* Oculta el menú en pantallas pequeñas */
+    }
+}
+
+.nav-link a {
+    color: #333;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-link a:hover {
+    background-color: #26619c;
+    color: white;
+}
+
+.moving-text {
+    background: linear-gradient(135deg, #1e1e1e, #26619c);
+    color: white; 
+    padding: 4px 0; 
+    text-align: center; 
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 10px; 
+    position: relative;
+    overflow: hidden;
+}
+
+.moving-text p {
+    display: inline-block;
+    white-space: nowrap; 
+    animation: moveText 40s linear infinite; 
+}
+
+@keyframes moveText {
+    0% {
+        transform: translateX(50%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
+}
+
+#ferroclub-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 45vh;
+    color: rgb(255, 255, 255);
+    background: linear-gradient(135deg, #1e1e1e, #26619c);
+    background-position: 0% 50%;
+    background-size: 200% 100%;
+    animation: slide 35s linear infinite;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    margin: 0.9px 0;
+}
+
+@media (max-width: 768px) {
+
+    #ferroclub-section {
+        height: 35vh;
+    }
+    
+    #ferroclub-section {
+        height: 30vh;
+        padding: 10px;
+    }
+}
+
+#ferroclub-Argentino h1 {
+    font-size: 4em;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+    letter-spacing: 5px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#hero::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(5px);
+    z-index: -10;
+}
+
+#hero h1 {
+    font-size: 3.5em;
+    max-width: 100%;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+#hero h1 {
+    font-size: 3.5em;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+#hero h1 {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+#hero .container {
+    text-align: center;
+    padding: 100px 30px;
+}
+
+#nuestros-cdp {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.carta {
+    width: 80%; 
+    max-width: 500px; 
+    background-position: center center;
+    background-size: cover;
+    padding: 40px; 
+    margin: 40px; 
+    border-radius: 15px;
+    height: 300px;
+    transition: all 0.4s ease;
+}
+
+.cdp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    perspective: 10000px;
+    background-size: 6000% 6000%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.carta {
+    width: 80%; 
+    max-width: 500px; 
+    background-position: center center;
+    background-size: cover;
+    padding: 40px; 
+    margin: 40px; 
+    border-radius: 15px;
+    height: 300px;
+    transition: all 0.4s ease;
+}
+
+.cdp {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    perspective: 10000px;
+    background-size: 6000% 6000%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.carta-link {
+    text-decoration: none; 
+}
+
+.carta {
+    position: relative;
+    z-index: 10;
+    background-size: 100% auto;
+    background-position: fixed;
+    color: white;
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease, filter 0.4s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.carta-imagen {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carta-imagen img {
+    height: 100%;
+    display: inline-block;
+}
+
+.carta-content {
+    overflow-y: auto; 
+    max-height: 100%; 
+}
+
+.carta::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);  /* Capa oscura en la imagen */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    border-radius: inherit;
+    content: ''; /* Necesario para mostrar el pseudo-elemento */
+    z-index: 1;
+}
+
+.carta:hover::before {
+    opacity: 1;  /* Aparece la capa oscura cuando el cursor está encima */
+}
+
+.carta:hover {
+    transform: scale(1.07) translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    filter: grayscale(20%);
+}
+
+.carta:hover {
+    transform: scale(1.07) translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.8);
+    filter: grayscale(20%);
+}
+
+.carta h3 {
+    margin: 0;
+    font-size: 1.7em;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carta:hover h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carta p {
+    font-size: 1em;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(10px);
+}
+
+.carta:hover p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carta-imagen img {
+    height: 100%;
+    display: inline-block;
+    transition: opacity 0.4s ease;  /* Transición suave de opacidad */
+}
+
+.carta:hover .carta-imagen img {
+    opacity: 0.3;  /* Imagen se vuelve más opaca al hacer hover */
+}
+
+/* Estilos para el contenido de la carta (títulos, etc.) */
+.carta h3, .carta p {
+    position: relative;
+    z-index: 2;  /* Asegura que el texto esté sobre la capa oscura */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.carta:hover h3, .carta:hover p {
+    opacity: 1;
+}
+
+.carta button {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    font-size: 1.2em;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.carta button:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: black;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.4s ease;
+}
+
+.carta button:hover {
+    background-color: rgb(37, 63, 90);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.carta button:hover:before {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.carta button i {
+    margin-left: 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s ease;
+}
+
+.carta button:hover i {
+    transform: translateX(5px);
+}
+
+.carta-lynch {
+    background-image: url("../Imagenes Inicio/monte\ caseros\ 3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.carta-escalada {
+    background-image: url("../Imagenes Inicio/Vapor\ y\ diesel.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.carta-tolosa {
+    background-image: url("../Imagenes Inicio/Locomotora\ Tolosa.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.carta {
+    position: relative;
+    z-index: 10;
+}
+
+.carta-container {
+    display: flex;
+    gap: 20px; 
+    justify-content: column; 
+    align-items: center; 
+}
+
+@media (min-width: 768px) {
+
+    .carta-container {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+#como-asociarse {
+    background: linear-gradient(135deg, #1e1e1e, #26619c);
+    text-align: center; /* Centra el contenido */
+    padding: 5px; /* Espaciado interno */
+}
+
+#asociarse {
+    display: inline-block; /* Asegura que el contenido tenga un ancho ajustado */
+    text-align: center;
+}
+
+.titulo-asociarse {
+    color: white; /* Texto blanco para contraste */
+    font-size: 1.5rem; /* Tamaño del título */
+    margin-bottom: 50px; /* Separación del botón */
+    font-weight: bold; /* Resalta el título */
+}
+
+button {
+    background-color: #26619c; /* Fondo blanco para contraste */
+    color: white; /* Texto con el mismo color de fondo original */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 30px; /* Bordes redondeados */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transición suave */
+}
+
+button:hover {
+    background-color: white; /* Oscurece el botón al pasar el mouse */
+    color: #26619c;
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+}
+
+#asociarse button:hover {
+    background: white;
+    transform: scale(1.1); 
+    box-shadow: 0px 0px 15px #26619c;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+#como-asociarse::before {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    transform: rotate(25deg);
+    animation: slideBackground 8s infinite linear;
+}
+
+@keyframes slideBackground {
+    0% { transform: translateX(0) rotate(25deg); }
+    100% { transform: translateX(100%) rotate(25deg); }
+}
+
+@media (min-width: 768px) {
+    #como-asociarse {
+        padding: 70px 50px;
+    }
+
+    #asociarse h2 {
+        font-size: 3em;
+    }
+
+    #asociarse button {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    #como-asociarse {
+        padding: 40px 15px; 
+    }
+
+    #asociarse h2 {
+        font-size: 1.8em; 
+    }
+
+    #asociarse button {
+        padding: 12px 25px;
+        font-size: 1em;
+    }
+}
+
+footer {
+    background: linear-gradient(135deg, #1e1e1e, #26619c);
+    color: white;
+    padding: 10px 10px; /* Puedes ajustar estos valores para más espacio interno */
+    text-align: center; /* Alineación horizontal del texto */
+    font-size: 15px;
+    width: 100%;
+    min-height: 50px; /* Controla la altura mínima */
+    display: flex; /* Flexbox para alinear contenido */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+
+footer .container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex; /* Flexbox para alinear contenido interno */
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+}
+
+footer p {
+    margin: 0;
+    font-weight: lighter;
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 720px) {
+    #como-asociarse {
+        padding: 70px 70px;
+    }
+    #como-asociarse h2 {
+        font-size: 2.5em;
+    }
+}

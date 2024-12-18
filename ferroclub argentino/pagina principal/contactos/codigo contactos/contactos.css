@@ -1,0 +1,85 @@
+/* Variables de colores */
+:root {
+  --background-color: #26619c;
+  --main-color: rgba(0, 0, 0, 0.479);
+  --text-color: white;
+  --accent-color: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.1);
+}
+  
+/* Estilo general */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+  
+.contact-page {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+  
+h1 {
+  color: var(--accent-color);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px var(--shadow-color);
+}
+  
+p {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+  
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+  
+li {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+  
+li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px var(--shadow-color);
+}
+  
+li strong {
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  display: block;
+}
+  
+li span {
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/* Responsivo */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    ul {
+      gap: 1rem;
+    }
+  
+    li {
+      padding: 0.8rem;
+    }
+}
+  
